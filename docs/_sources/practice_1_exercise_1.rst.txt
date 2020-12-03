@@ -6,7 +6,7 @@ programming language, namely **variables**, **events**, **conditionals**, and **
 it involves mechanical engineering, electrical engineering, control theory, and lots more, but programming is figuratively 
 the glue that holds the system together and allows the robot to perform complex behaviors.
 
-If you are already familiar with the basic programming concepts, then this section can still help you out in solving the 
+If you are already familiar with the basic programming concepts, then this section (P1 Exercise 1-5) can still help you out in solving the 
 tasks in the later section. Yet if you are new to programming, then this section will hopefully provide you the tools to 
 get you going.
 

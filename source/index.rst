@@ -14,7 +14,7 @@ time to go through this material, just submit the solutions to the tasks before 
 
 Try to solve the tasks individually, we are here to learn. If you already are somewhat experienced in this field, then working 
 this through individually should not be a problem. But if you are new to programming then trying to understand the material 
-matters the most. But ofcourse, if you get stuck then definitely ask for help from the supervisors (via MS Teams) or your friends.
+matters the most. But of course, if you get stuck then definitely ask for help from the supervisors (via MS Teams) or your friends.
 
 Few words about the good and the bad of learning robotics through simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,5 +51,11 @@ Practice 1
 
 Practice 2
 ----------
+
+.. toctree::
+   :maxdepth: 1
+
+   practice_2_exercise_1
+
 
 This practice session is **optional**. It's for those who found the first practice session too simple and want more.
