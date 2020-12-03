@@ -1,0 +1,38 @@
+Exercise 1
+==========
+
+This tutorial shows how to enable and use a tracer which allows you to see how commands and requests propagate
+through different subsystems of TeMoto. Tracer in combination with a trace collector (such as Jaeger) is a great
+debugging tool that indicates the exact time and subsystem where a specific event took place. 
+
+About Tracing
+-------------
+Figure 1 shows an example trace where an action `TaTutStartPipe` invokes the `load_pipe` service in the `component_manager`.
+The `load_pipe` service then invokes `load_component` service 2 times (on 8th and 17th millisecond) where both 
+send a request to `load_process` service in the `temoto_er_manager`. It can also be seen on the trace that the 
+`load_pipe` request took 33.07ms in total and also durations of each span is shown.
+
+.. figure:: /images/tracing/jaeger_trace_example.png
+    :width: 650px
+    :align: center
+
+    **Figure. 1:** Example of a trace, visualized in Jaeger trace collector GUI. 
+
+So it's quite evident that tracing provides good insight to the behaviour of a complex system, indicating bottlenecks
+and request hirearchies.
+
+Enabling The Tracer
+-------------------
+
+1) Re-Build TeMoto
+~~~~~~~~~~~~~~~~~~
+By default TeMoto is compiled without tracing functionalities, so first thing you need to do in order to enable
+them is to compile TeMoto with an additional compiler flag:
+
+.. code-block:: bash
+
+  cd your/catkin_workspace/directory
+  catkin build --cmake-args -DTEMOTO_ENABLE_TRACING=ON
+
+2) Set-Up the Tracer Library
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~

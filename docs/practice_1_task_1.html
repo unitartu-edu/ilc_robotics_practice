@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>P1 Task 1 - Draw Your Initials &mdash; Robotics Practice Session  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="P1 Task 2 - Draw a Grid Of Rectangles" href="practice_1_task_2.html" />
+    <link rel="prev" title="P1 Exercise 5 - Loops" href="practice_1_exercise_5.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Robotics Practice Session
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_1.html">P1 Exercise 1 - Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_2.html">P1 Exercise 2 - Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_3.html">P1 Exercise 3 - Conditional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_4.html">P1 Exercise 4 - Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_5.html">P1 Exercise 5 - Loops</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">P1 Task 1 - Draw Your Initials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_2.html">P1 Task 2 - Draw a Grid Of Rectangles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_3.html">P1 Task 3 - Events</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robotics Practice Session</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>P1 Task 1 - Draw Your Initials</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/practice_1_task_1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="p1-task-1-draw-your-initials">
+<h1>P1 Task 1 - Draw Your Initials<a class="headerlink" href="#p1-task-1-draw-your-initials" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When finished, submit the iRobot project code of your solution in Moodle</p>
+</div>
+<p>The goal of this task is to draw your initials. So for example “Robert Valner” would be drawn as “RV”, just like in
+figure 1. If you have more than 3 names then let’s try to do it with just 3, so that “Robert Arthur Billy
+Valner Junior” would be “RVJ”.</p>
+<p>This task is meant to get you warmed up if you didn’t try out the tutorial examples on your own. Additionally this
+task allows us (the supervisors) to somehow acknowledge that it was likely “YOU” who did the tasks. But we’re all here
+to learn, so try to solve the tasks independently.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/task_initials.gif"><img alt="_images/task_initials.gif" src="_images/task_initials.gif" style="width: 278.8px; height: 320.8px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 1:</strong> Outcome of the task 1</span></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="practice_1_task_2.html" class="btn btn-neutral float-right" title="P1 Task 2 - Draw a Grid Of Rectangles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="practice_1_exercise_5.html" class="btn btn-neutral float-left" title="P1 Exercise 5 - Loops" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Robert Valner
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

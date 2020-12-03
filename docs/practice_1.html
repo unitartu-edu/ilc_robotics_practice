@@ -1,0 +1,222 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exercise 1 &mdash; Robotics Practice Session  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Robotics Practice Session
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_1.html">Practice 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robotics Practice Session</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Exercise 1</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/practice_1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exercise-1">
+<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows how to enable and use a tracer which allows you to see how commands and requests propagate
+through different subsystems of TeMoto. Tracer in combination with a trace collector (such as Jaeger) is a great
+debugging tool that indicates the exact time and subsystem where a specific event took place.</p>
+<div class="section" id="about-tracing">
+<h2>About Tracing<a class="headerlink" href="#about-tracing" title="Permalink to this headline">¶</a></h2>
+<p>Figure 1 shows an example trace where an action <cite>TaTutStartPipe</cite> invokes the <cite>load_pipe</cite> service in the <cite>component_manager</cite>.
+The <cite>load_pipe</cite> service then invokes <cite>load_component</cite> service 2 times (on 8th and 17th millisecond) where both
+send a request to <cite>load_process</cite> service in the <cite>temoto_er_manager</cite>. It can also be seen on the trace that the
+<cite>load_pipe</cite> request took 33.07ms in total and also durations of each span is shown.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="images/tracing/jaeger_trace_example.png"><img alt="images/tracing/jaeger_trace_example.png" src="images/tracing/jaeger_trace_example.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 1:</strong> Example of a trace, visualized in Jaeger trace collector GUI.</span></p>
+</div>
+<p>So it’s quite evident that tracing provides good insight to the behaviour of a complex system, indicating bottlenecks
+and request hirearchies.</p>
+</div>
+<div class="section" id="enabling-the-tracer">
+<h2>Enabling The Tracer<a class="headerlink" href="#enabling-the-tracer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="re-build-temoto">
+<h3>1) Re-Build TeMoto<a class="headerlink" href="#re-build-temoto" title="Permalink to this headline">¶</a></h3>
+<p>By default TeMoto is compiled without tracing functionalities, so first thing you need to do in order to enable
+them is to compile TeMoto with an additional compiler flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> your/catkin_workspace/directory
+catkin build --cmake-args -DTEMOTO_ENABLE_TRACING<span class="o">=</span>ON
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-up-the-tracer-library">
+<h3>2) Set-Up the Tracer Library<a class="headerlink" href="#set-up-the-tracer-library" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Robert Valner
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

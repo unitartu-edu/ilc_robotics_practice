@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>P1 Exercise 5 - Loops &mdash; Robotics Practice Session  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="P1 Task 1 - Draw Your Initials" href="practice_1_task_1.html" />
+    <link rel="prev" title="P1 Exercise 4 - Events" href="practice_1_exercise_4.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Robotics Practice Session
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_1.html">P1 Exercise 1 - Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_2.html">P1 Exercise 2 - Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_3.html">P1 Exercise 3 - Conditional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_4.html">P1 Exercise 4 - Events</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">P1 Exercise 5 - Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#for-loops">For-Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#while-loops">While-Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nested-loops">Nested Loops</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_1.html">P1 Task 1 - Draw Your Initials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_2.html">P1 Task 2 - Draw a Grid Of Rectangles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_3.html">P1 Task 3 - Events</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robotics Practice Session</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>P1 Exercise 5 - Loops</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/practice_1_exercise_5.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="p1-exercise-5-loops">
+<h1>P1 Exercise 5 - Loops<a class="headerlink" href="#p1-exercise-5-loops" title="Permalink to this headline">¶</a></h1>
+<p>Loops are yet another technique to automate repetitive behaviours, thus making you code and development time shorter.
+There are different types of loops, and here we’re going to introduce for-loops, while-loops and nested loops.</p>
+<div class="section" id="for-loops">
+<h2>For-Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
+<p>For-loops are used when something has to be repeated for a fixed number of periods. Figure 5.1 shows a use-case
+of a for-loop, where the task is to draw a limited number of dashes. Each cycle of the for-loop draws one dash but the
+loop is repeated for 5 times, resulting in this neat little dashed line.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/irobot_tutorial_for_loop.gif"><img alt="_images/irobot_tutorial_for_loop.gif" src="_images/irobot_tutorial_for_loop.gif" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 5.1:</strong> An example of a for-loop. iRobot project code DXZHV</span></p>
+</div>
+</div>
+<div class="section" id="while-loops">
+<h2>While-Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
+<p>While-loops are useful if the robot must do something while a specific condition is true. For example have a look at
+figure 5.2. When the program is started, a couple of variables are initialized, most importantly a variable
+called <code class="docutils literal notranslate"><span class="pre">move_robot</span></code>. Then the program enters the while-loop and stays in there while the <code class="docutils literal notranslate"><span class="pre">move_robot</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+The robot would be in this loop forever unless something changed the <code class="docutils literal notranslate"><span class="pre">move_robot</span></code> variable to <code class="docutils literal notranslate"><span class="pre">false</span></code>, which is done
+in the <code class="docutils literal notranslate"><span class="pre">robot.whenTouched</span></code> event (see the events exercise).</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/irobot_tutorial_while_loop.gif"><img alt="_images/irobot_tutorial_while_loop.gif" src="_images/irobot_tutorial_while_loop.gif" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 5.2:</strong> An example of a while-loop. iRobot project code Y2KQK</span></p>
+</div>
+</div>
+<div class="section" id="nested-loops">
+<h2>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">¶</a></h2>
+<p>Nested loop is when you have one loop inside another. This is useful for programming behaviours like “<em>For every floor
+in this building, clean up every room on each floor</em>”. An example of a nested loop can be seen on figure 5.3,
+where the robot draws a dashed octagon.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/irobot_tutorial_nested_loop.gif"><img alt="_images/irobot_tutorial_nested_loop.gif" src="_images/irobot_tutorial_nested_loop.gif" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 5.3:</strong> An example of a nested loop. iRobot project code ZSKAN</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="practice_1_task_1.html" class="btn btn-neutral float-right" title="P1 Task 1 - Draw Your Initials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="practice_1_exercise_4.html" class="btn btn-neutral float-left" title="P1 Exercise 4 - Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Robert Valner
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
