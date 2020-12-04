@@ -44,4 +44,4 @@ where the robot draws a dashed octagon.
     :width: 650px
     :align: center
 
-    **Figure. 5.3:** An example of a nested loop. iRobot project code ZSKAN 
+    **Figure. 5.3:** An example of a nested loop. iRobot project code ZSKAN

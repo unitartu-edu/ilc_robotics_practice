@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>P2 Task 1 - Obstacle Avoidance &mdash; Robotics Practice Session  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="P2 Exercise 1 - Introduction" href="practice_2_exercise_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Robotics Practice Session
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_1.html">P1 Exercise 1 - Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_2.html">P1 Exercise 2 - Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_3.html">P1 Exercise 3 - Conditional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_4.html">P1 Exercise 4 - Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_exercise_5.html">P1 Exercise 5 - Loops</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_1.html">P1 Task 1 - Draw Your Initials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_2.html">P1 Task 2 - Draw a Grid Of Rectangles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_1_task_3.html">P1 Task 3 - Events</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="practice_2_exercise_1.html">P2 Exercise 1 - Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">P2 Task 1 - Obstacle Avoidance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-you-going">Getting You Going</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robotics Practice Session</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>P2 Task 1 - Obstacle Avoidance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/practice_2_task_1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="p2-task-1-obstacle-avoidance">
+<h1>P2 Task 1 - Obstacle Avoidance<a class="headerlink" href="#p2-task-1-obstacle-avoidance" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Practice 2 is optional. You don’t have to do it if you don’t feel like it. But its way more challenging and hence fun</p>
+</div>
+<p>The objective of this task is to design a controller, that <strong>on average</strong> solves the <em>“Obstacle Avoidance”</em> challenge at least 5 seconds quicker than
+the default controller, which is 61 s. So again, the time you have to beat is <code class="docutils literal notranslate"><span class="pre">61</span> <span class="pre">s</span> <span class="pre">-</span> <span class="pre">5</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">56</span> <span class="pre">s</span></code> and your controller’s performance
+should be evaluated on at least 15 samples (run your best controller for 15 times). In this case we rule out any lucky shots. Scroll down for further
+instructions and tips.</p>
+<dl class="docutils">
+<dt>After you are done with your controller, submit the following things in Moodle:</dt>
+<dd><ul class="first last simple">
+<li>your Robotbenchmark username</li>
+<li>the code of your controller (just a simple copy/paste)</li>
+</ul>
+</dd>
+</dl>
+<p>After the submission deadline, the student who submitted the best controller will get a prize!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You have to be logged in to the Robotbenchmark.net to save your results</p>
+</div>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/webots_task_1.png"><img alt="_images/webots_task_1.png" src="_images/webots_task_1.png" style="width: 484.65px; height: 356.85px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 1:</strong> Environment for the obstacle avoidance taks</span></p>
+</div>
+<div class="section" id="getting-you-going">
+<h2>Getting You Going<a class="headerlink" href="#getting-you-going" title="Permalink to this headline">¶</a></h2>
+<p>The default controller already might seem too complicated, but take your time and examine what’s going on in the code line-by-line.
+Make sure you read the instructions provided in the simulator. Over there you will be told, that the robot has 5 distance sensors which
+are used for detecting obstacles. Each sensor will output a number that signifies the distace between the sensor and
+the closest object in front of it.</p>
+<p>The default controller is already avoiding obstacles, but it does not know where it’s supposed to go (the robot has to cross the
+red line in the other side of the room). For that, the instructions give you a hint that you can use a compass that’s “built-in”
+to the robot. Yet for some it might be bit tricky to set-up the compass in the Python code.</p>
+<p>Therefore you will be given a slight advantage: below you can find the default controller with the compass related code
+already included into the script. It’s up to you how you use it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Braitenberg-based obstacle-avoiding robot controller.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">math</span>                    <span class="c1"># Import math Library, we need it to calculate the tangent</span>
+<span class="kn">from</span> <span class="nn">controller</span> <span class="kn">import</span> <span class="n">Robot</span>   <span class="c1"># Import the Robot class</span>
+<span class="kn">from</span> <span class="nn">controller</span> <span class="kn">import</span> <span class="n">Compass</span> <span class="c1"># import Compass module</span>
+
+<span class="c1"># Get reference to the robot.</span>
+<span class="n">robot</span> <span class="o">=</span> <span class="n">Robot</span><span class="p">()</span>
+
+<span class="c1"># Get simulation step length.</span>
+<span class="n">timeStep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">robot</span><span class="o">.</span><span class="n">getBasicTimeStep</span><span class="p">())</span>
+
+<span class="c1"># get robot&#39;s Compass device</span>
+<span class="n">compass</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getCompass</span><span class="p">(</span><span class="s2">&quot;compass&quot;</span><span class="p">)</span>
+
+<span class="c1"># enable the Compass</span>
+<span class="n">compass</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span>
+
+<span class="c1"># Constants of the Thymio II motors and distance sensors.</span>
+<span class="n">maxMotorVelocity</span> <span class="o">=</span> <span class="mf">9.53</span>
+<span class="n">distanceSensorCalibrationConstant</span> <span class="o">=</span> <span class="mi">360</span>
+
+<span class="c1"># Get left and right wheel motors.</span>
+<span class="n">leftMotor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getMotor</span><span class="p">(</span><span class="s2">&quot;motor.left&quot;</span><span class="p">)</span>
+<span class="n">rightMotor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getMotor</span><span class="p">(</span><span class="s2">&quot;motor.right&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get frontal distance sensors.</span>
+<span class="n">outerLeftSensor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getDistanceSensor</span><span class="p">(</span><span class="s2">&quot;prox.horizontal.0&quot;</span><span class="p">)</span>
+<span class="n">centralLeftSensor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getDistanceSensor</span><span class="p">(</span><span class="s2">&quot;prox.horizontal.1&quot;</span><span class="p">)</span>
+<span class="n">centralSensor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getDistanceSensor</span><span class="p">(</span><span class="s2">&quot;prox.horizontal.2&quot;</span><span class="p">)</span>
+<span class="n">centralRightSensor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getDistanceSensor</span><span class="p">(</span><span class="s2">&quot;prox.horizontal.3&quot;</span><span class="p">)</span>
+<span class="n">outerRightSensor</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">getDistanceSensor</span><span class="p">(</span><span class="s2">&quot;prox.horizontal.4&quot;</span><span class="p">)</span>
+
+<span class="c1"># Enable distance sensors.</span>
+<span class="n">outerLeftSensor</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span>
+<span class="n">centralLeftSensor</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span>
+<span class="n">centralSensor</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span>
+<span class="n">centralRightSensor</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span>
+<span class="n">outerRightSensor</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span>
+
+<span class="c1"># Disable motor PID control mode.</span>
+<span class="n">leftMotor</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">))</span>
+<span class="n">rightMotor</span><span class="o">.</span><span class="n">setPosition</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">))</span>
+
+<span class="c1"># Set ideal motor velocity.</span>
+<span class="n">initialVelocity</span> <span class="o">=</span> <span class="mf">0.7</span> <span class="o">*</span> <span class="n">maxMotorVelocity</span>
+
+<span class="c1"># Set the initial velocity of the left and right wheel motors.</span>
+<span class="n">leftMotor</span><span class="o">.</span><span class="n">setVelocity</span><span class="p">(</span><span class="n">initialVelocity</span><span class="p">)</span>
+<span class="n">rightMotor</span><span class="o">.</span><span class="n">setVelocity</span><span class="p">(</span><span class="n">initialVelocity</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">robot</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">timeStep</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+
+    <span class="c1"># Read the raw values from the compass and convert them to a heading angle</span>
+    <span class="n">compass_raw_values</span> <span class="o">=</span> <span class="n">compass</span><span class="o">.</span><span class="n">getValues</span><span class="p">()</span>
+    <span class="n">heading_raw</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">compass_raw_values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">compass_raw_values</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">heading</span> <span class="o">=</span> <span class="p">(</span><span class="n">heading_raw</span> <span class="o">-</span> <span class="mf">1.5708</span><span class="p">)</span> <span class="o">/</span> <span class="mf">3.1416</span> <span class="o">*</span> <span class="mf">180.0</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">heading</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">):</span>
+        <span class="n">heading</span> <span class="o">=</span> <span class="n">heading</span> <span class="o">+</span> <span class="mf">360.0</span>
+
+    <span class="c1"># It is up to you how you use the &quot;heading&quot; to direct the robot. You can print the values to the</span>
+    <span class="c1"># console but this slows the simulation down significantly. Just have a look at the vaules and then</span>
+    <span class="c1"># comment it out</span>
+
+    <span class="c1"># print (&quot;heading = &quot; + str(heading))</span>
+
+    <span class="c1"># Read values from four distance sensors and calibrate.</span>
+    <span class="n">outerLeftSensorValue</span> <span class="o">=</span> <span class="n">outerLeftSensor</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span> <span class="o">/</span> <span class="n">distanceSensorCalibrationConstant</span>
+    <span class="n">centralLeftSensorValue</span> <span class="o">=</span> <span class="n">centralLeftSensor</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span> <span class="o">/</span> <span class="n">distanceSensorCalibrationConstant</span>
+    <span class="n">centralSensorValue</span> <span class="o">=</span> <span class="n">centralSensor</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span> <span class="o">/</span> <span class="n">distanceSensorCalibrationConstant</span>
+    <span class="n">centralRightSensorValue</span> <span class="o">=</span> <span class="n">centralRightSensor</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span> <span class="o">/</span> <span class="n">distanceSensorCalibrationConstant</span>
+    <span class="n">outerRightSensorValue</span> <span class="o">=</span> <span class="n">outerRightSensor</span><span class="o">.</span><span class="n">getValue</span><span class="p">()</span> <span class="o">/</span> <span class="n">distanceSensorCalibrationConstant</span>
+
+    <span class="c1"># Set wheel velocities based on sensor values, prefer right turns if the central sensor is triggered.</span>
+    <span class="n">leftMotor</span><span class="o">.</span><span class="n">setVelocity</span><span class="p">(</span><span class="n">initialVelocity</span> <span class="o">-</span> <span class="p">(</span><span class="n">centralRightSensorValue</span> <span class="o">+</span> <span class="n">outerRightSensorValue</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">rightMotor</span><span class="o">.</span><span class="n">setVelocity</span><span class="p">(</span><span class="n">initialVelocity</span> <span class="o">-</span> <span class="p">(</span><span class="n">centralLeftSensorValue</span> <span class="o">+</span> <span class="n">outerLeftSensorValue</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">centralSensorValue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="practice_2_exercise_1.html" class="btn btn-neutral float-left" title="P2 Exercise 1 - Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Robert Valner
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -26,3 +26,4 @@ provide you some guidance.
     :align: center
 
     **Figure. 2c:** A 3x5 grid
+ 

@@ -14,10 +14,10 @@ time to go through this material, just submit the solutions to the tasks before 
 
 Try to solve the tasks individually, we are here to learn. If you already are somewhat experienced in this field, then working 
 this through individually should not be a problem. But if you are new to programming then trying to understand the material 
-matters the most. But ofcourse, if you get stuck then definitely ask for help from the supervisors (via MS Teams) or your friends.
+matters the most. But of course, if you get stuck then definitely ask for help from the supervisors (via MS Teams) or your friends.
 
-Few words about the good and the bad of learning robotics through simulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Good and the Bad of Learning Robotics Through Simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The good
  * You have a robot always at hand
@@ -28,7 +28,7 @@ The good
 
 The bad
  * A sim doesn’t give you the full experience of setting up the system, thus when switching to a real robot, things might differ a lot
- * Simulated environment is often idealistic and does not take minor things into account, such as imperfect floor or wheels that cause the robot to slip
+ * Simulated environment is often idealistic and might not take minor things into account, such as imperfect floor or wheels that cause the robot to slip
 
 Practice 1
 ----------
@@ -49,7 +49,13 @@ Practice 1
    practice_1_task_2
    practice_1_task_3
 
-Practice 2
-----------
+Practice 2 - *Optional*
+-----------------------
 
 This practice session is **optional**. It's for those who found the first practice session too simple and want more.
+
+.. toctree::
+   :maxdepth: 1
+
+   practice_2_exercise_1
+   practice_2_task_1
