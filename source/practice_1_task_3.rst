@@ -11,3 +11,4 @@ pressed again, while the robot is still, the robot continues driving in circles.
     :align: center
 
     **Figure. 3:** Outcome of task 3
+ 

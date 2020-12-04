@@ -77,3 +77,4 @@ a line (set ``markerDown``), see what happens if you click on different numbers 
     :align: center
 
     **Figure. 1.4:** Explore the iRobot Root RT1 simulation environment.
+ 

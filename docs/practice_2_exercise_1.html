@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="P2 Task 1 - Obstacle Avoidance" href="practice_2_task_1.html" />
     <link rel="prev" title="P1 Task 3 - Events" href="practice_1_task_3.html" /> 
 </head>
 
@@ -93,6 +94,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">P2 Exercise 1 - Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice_2_task_1.html">P2 Task 1 - Obstacle Avoidance</a></li>
 </ul>
 
             
@@ -163,13 +165,26 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Practice 2 is optional. You don’t have to do it if you don’t feel like it. But its way more challenging and hence fun</p>
 </div>
-<p>In this practice we are going to kick the difficulty up a notch and switch the simulation environment. The simulation
-itself is based on <a class="reference external" href="https://cyberbotics.com/">Webots</a> simulator that is hosted on <a class="reference external" href="https://robotbenchmark.net/">robotbenchmark.net</a>.
-Robotbenchmark has created a list of challenges, where the fist two (“Viewpoint Control” and “Robot Programming”) just
-introduce the environment. So let’s have a look.</p>
-<div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="_images/irobot_tutorial_variables.gif"><img alt="_images/irobot_tutorial_variables.gif" src="_images/irobot_tutorial_variables.gif" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-text"><strong>Figure. 2:</strong> An example use of variables. iRobot project code RU8DA</span></p>
+<p>In this practice we are going to turn the difficulty up a notch and switch the simulation environment and the programming language.
+The simulation itself is based on <a class="reference external" href="https://cyberbotics.com/">Webots</a> simulator that is hosted on <a class="reference external" href="https://robotbenchmark.net/">robotbenchmark.net</a>
+(see figure 1). The programming is done via Python programming language. Robotbenchmark has created a list of challenges,
+where the fist two (“Viewpoint Control” and “Robot Programming”) just introduce the environment. So let’s have a look.</p>
+<p>Before we dive right in, make sure that your web browser is compatible with this simulator. Have a look at <a class="reference external" href="https://robotbenchmark.net/about">this link</a>
+and check the <em>“Browser Compatibility”</em> section. Next head to <a class="reference external" href="https://robotbenchmark.net/">robotbenchmark.net</a>. You will
+see a list of challenges. Go through the “Viewpoint Control” and “Robot Programming”, these introduce you the environment and how
+to program the robot’s controller.</p>
+<p>It might take some time to load the simulation and depending on your hardware, it might not be the smoothest. After the sim
+is loaded you will see an instructions window in the upper left corner of your screen. Don’t ignore them, as these explain the
+rules of the challenge and provide some good tips. For example there is a console window, where your controller can print out
+debugging messages which might provide hepful insight on why yor controller is or is not working.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">For your information, the performance of the simulator will degrade significantly if you print too frequently (for example every controller cycle) in the console</p>
+</div>
+<p>If you want to record your results, then you have to create an account and log in, quite straight forward.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/webots_tutorial_intro.png"><img alt="_images/webots_tutorial_intro.png" src="_images/webots_tutorial_intro.png" style="width: 348.0px; height: 498.0px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 1:</strong> Webots simulator hosted on Robotbenchmark</span></p>
 </div>
 </div>
 
@@ -180,6 +195,8 @@ introduce the environment. So let’s have a look.</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="practice_2_task_1.html" class="btn btn-neutral float-right" title="P2 Task 1 - Obstacle Avoidance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="practice_1_task_3.html" class="btn btn-neutral float-left" title="P1 Task 3 - Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

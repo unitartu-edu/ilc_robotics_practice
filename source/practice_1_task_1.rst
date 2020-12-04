@@ -15,4 +15,4 @@ to learn, so try to solve the tasks independently.
     :scale: 40%
     :align: center
 
-    **Figure. 1:** Outcome of the task 1
+    **Figure. 1:** Outcome of the task 1 
