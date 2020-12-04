@@ -16,8 +16,8 @@ Try to solve the tasks individually, we are here to learn. If you already are so
 this through individually should not be a problem. But if you are new to programming then trying to understand the material 
 matters the most. But of course, if you get stuck then definitely ask for help from the supervisors (via MS Teams) or your friends.
 
-The Good and the Bad of Learning Robotics Through Simulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Good and the Bad About Learning Robotics Through a Simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The good
  * You have a robot always at hand
