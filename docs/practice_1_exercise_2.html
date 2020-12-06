@@ -162,7 +162,7 @@
   <div class="section" id="p1-exercise-2-variables">
 <h1>P1 Exercise 2 - Variables<a class="headerlink" href="#p1-exercise-2-variables" title="Permalink to this headline">¶</a></h1>
 <p>Ultimately as a robot programmer or any kind of programmer for that matter, the faster you can work with your code,
-the better. The concept of variables is great in that regard. For example, have a look at the figure 2.
+the better. The concept of variables is great in that regard. For example, have a look at the figure 2.1.
 In that depicted example the robot is programmed to follow a triangular path, where each side of the triangle is equal.
 Now a variable is introduced for the length of the triangle’s side called <code class="docutils literal notranslate"><span class="pre">distance</span></code> and also a variable for the
 triangle’s <code class="docutils literal notranslate"><span class="pre">angles</span></code>. Through those variables we could easily define a larger triangular path by just changing the
@@ -170,9 +170,20 @@ value of the <code class="docutils literal notranslate"><span class="pre">distan
 <p>In a larger program, one could easily have tens or even hundreds of instances, where a certain value is needed, such
 as the size of the robot’s wheel. If the robot’s wheel is changed, the programmer could easily modify the code for the
 new wheel size by just changing the according variable.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Initialize your variables below the <code class="docutils literal notranslate"><span class="pre">robot.whenProgramStarted()</span></code> line, otherwise the iRobot environment will crash (screen goes gray), see figure 2.2</p>
+</div>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/irobot_tutorial_variables.gif"><img alt="_images/irobot_tutorial_variables.gif" src="_images/irobot_tutorial_variables.gif" style="width: 650px;" /></a>
-<p class="caption"><span class="caption-text"><strong>Figure. 2:</strong> An example use of variables. iRobot project code RU8DA</span></p>
+<p class="caption"><span class="caption-text"><strong>Figure. 2.1:</strong> An example use of variables. iRobot project code RU8DA</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/irobot_tutorial_variables_bug.gif"><img alt="_images/irobot_tutorial_variables_bug.gif" src="_images/irobot_tutorial_variables_bug.gif" style="width: 406.7px; height: 331.8px;" /></a>
+<p class="caption"><span class="caption-text"><strong>Figure. 2.2:</strong> iRobot environment crashes if you try to initialize the variables above the <code class="docutils literal notranslate"><span class="pre">robot.whenProgramStarted()</span></code> line, where the variables are defined</span></p>
 </div>
 </div>
 
