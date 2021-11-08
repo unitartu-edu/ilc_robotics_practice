@@ -1,5 +1,5 @@
-P2 Task 1 - Obstacle Avoidance
-==============================
+P2 Task 1 - Obstacle Avoidance (Advanced)
+=========================================
 
 .. note:: Practice 2 is optional. You don't have to do it if you don't feel like it. But its way more challenging and hence fun
 
@@ -28,7 +28,7 @@ Getting You Going
 The default controller already might seem too complicated, but take your time and examine what's going on in the code line-by-line. 
 Make sure you read the instructions provided in the simulator. Over there you will be told, that the robot has 5 distance sensors which 
 are used for detecting obstacles. Each sensor will output a number that signifies the distace between the sensor and 
-the closest object in front of it. 
+the closest object in front of it.
 
 The default controller is already avoiding obstacles, but it does not know where it's supposed to go (the robot has to cross the 
 red line in the other side of the room). For that, the instructions give you a hint that you can use a compass that's "built-in" 

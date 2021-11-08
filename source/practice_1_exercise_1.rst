@@ -8,17 +8,19 @@ the glue that holds the system together and allows the robot to perform complex 
 
 If you are already familiar with the basic programming concepts, then this section (P1 Exercise 1-5) can still help you out in solving the 
 tasks in the later section. Yet if you are new to programming, then this section will hopefully provide you the tools to 
-get you going.
+get you going. 
 
 Getting to Know the iRobot Root Environment
 -------------------------------------------
 
 This practice session will be based on iRobot Root RT1 simulation. It is very simplistic and maybe even child-like, but 
 don't be fooled about it's appearence. This environment is enough to learn and test the basic concepts of programming that 
-are essential in robotics. 
+are essential in robotics.
 
  * Link to the environment: https://code.irobot.com
  * Introductory video about the environment: https://edu.irobot.com/learning-library/getting-started-with-root
+
+.. note:: The web environment may take some time to load and you can ingnore the warnings about the lack of bluetooth support (firefox)
 
 Starting a New Project
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -27,7 +29,7 @@ Project is where you keep your code. For example if you go through the exercises
 project. Also each solution to the later tasks (P1 Task 1-3) must be in its own project. See figure 1.1 for a reference on how to 
 create a new project.
 
-.. figure:: /figures/irobot_root/irobot_tutorial_exercise_1_new_project.gif
+.. figure:: /figures/irobot_root/p1_e1_1.gif
     :width: 650px
     :align: center
 
@@ -40,20 +42,20 @@ If you follow the exercises, you will notice that **there is a five digit code u
 you can **download the shown example into your own project workspace** and play around with it. See figure 1.2 for a reference on 
 how to download other projcets.
 
-.. figure:: /figures/irobot_root/irobot_tutorial_exercise_1_download_project.gif
+.. figure:: /figures/irobot_root/p1_e1_2.gif
     :width: 650px
     :align: center
 
     **Figure. 1.2:** Download an existing project in the iRobot Root RT1 simulation environment.
 
-Exporting Your Project
+Uploading Your Project
 ~~~~~~~~~~~~~~~~~~~~~~
 
 After you finish with the exercises, you need to solve the three tasks (P1 Task 1-3). Each task must be in its own project 
-and you have to export them and **submit the five digit project code in moodle**. See figure 1.3 for a reference on how to 
-export projects.
+and you have to upload them and **submit the five digit project code in moodle**. See figure 1.3 for a reference on how to 
+upload projects.
 
-.. figure:: /figures/irobot_root/irobot_tutorial_exercise_1_share_project.gif
+.. figure:: /figures/irobot_root/p1_e1_3.gif
     :width: 650px
     :align: center
 
@@ -72,7 +74,7 @@ The further tutorials do provide examples of different functions that this envir
 covered that you might find useful when solving the obligatory tasks. So please, explore! Try to move the robot, try to draw 
 a line (set ``markerDown``), see what happens if you click on different numbers and values, etc.
 
-.. figure:: /figures/irobot_root/irobot_tutorial_explore_the_ide.gif
+.. figure:: /figures/irobot_root/p1_e1_4.gif
     :width: 650px
     :align: center
 
